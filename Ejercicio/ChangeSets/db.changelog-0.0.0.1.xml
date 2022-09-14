@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9 
+                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet id="changelog-1.0" author="israelmorales">
+        <tagDatabase tag="version_1.0" />
+    </changeSet>
+
+    <changeSet author="israelmorales" id="changelog-2.0">
+        <createTable tableName="Customer">
+            <column name="idCustomer" type="int">
+                <constraints nullable="true" primaryKey="false" unique="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="israelmorales" id="changelog-3.0">
+        <addColumn tableName="Customer">
+            <column name="customername" type="varchar(50)"></column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="israelmorales" id="changelog-4.0">
+        <addColumn tableName="Customer">
+            <column name="customerlastname" type="varchar(50)"></column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="israelmorales" id="changelog-5.0">
+        <addColumn tableName="Customer">
+            <column name="customeremail" type="varchar(50)"></column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog> 
